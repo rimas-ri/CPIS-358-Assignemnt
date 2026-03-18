@@ -1,0 +1,485 @@
+/* basic css starter to remove the default margin and padding */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fcfafa;
+}
+
+/* gradient class used for navbar/footer backgrounds */
+.gradiant {
+    background: #ffb8d4;
+    background: radial-gradient(circle, rgba(255, 184, 212, 1) 0%, rgba(182, 250, 230, 1) 100%);
+}
+
+h1, caption {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #f59bbf;
+}
+
+li, a, p, label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(152, 152, 147);
+}
+
+span {
+    color: #8ae6d6;
+}
+
+/* the nav bar container i used flex to seperate 
+    the logo and the nav bar itself */
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 10px;
+}
+
+/* styles applied to the nav bar itself to make it rounder around the boraders
+   used flex to arrange the nav-items horizontality */
+nav {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* spacing between the itemes */
+.nav_items {
+    padding: 0px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* a flex container i made for the linkedin and github linkes i put in the footer
+   just to style them better*/
+.footer-links {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 21px;
+    gap: 60px;
+}
+
+/* styles for the cpoyright paragraph*/
+footer p {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+/* styling for the svgs i took from w3school for  linkedin and github */
+.footer-links svg {
+    height: 20px;
+    width: 20px;
+}
+
+/* styling for the home and about me page just
+    to make the paragraph/h1 and photo styling look better */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* styling for brief in the home page used flex to center 
+    the h1 and image and some padding to make the page a bit bigger */
+.Brief {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding-top: 100px;
+}
+
+/* padding to push the image to the right a bit*/
+.Brief img {
+    padding-left: 80px;
+}
+
+.Brief .card-title {
+    color: #f59bbf;
+    text-align: center;
+    padding-left: 70px;
+}
+
+.card-title a { 
+    font-weight: bold;
+}
+/* grid layout in the about me section to seperate the paragraph and the image*/
+.about-me {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 150px;
+    text-align: center;
+}
+
+/* styling for the about me parapraph*/
+.about-text {
+    font-size: 1.05rem;
+    color: rgb(120, 120, 116);
+    line-height: 1.7;
+    max-width: 60ch;
+    margin-top: 12px;
+}
+
+/* styling to push the image to the righ*/
+.about-me img {
+    padding-left: 100px;
+}
+
+/* styling to center the button */
+.resume-button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/* styling for the 3 dots i put above the button parapraph*/
+.resume-button h1 {
+    color: rgba(182, 250, 230, 1);
+}
+
+/* styling for the resume button parapraph*/
+.resume-button p {
+    text-align: center;
+    line-height: 1.7;
+    color: rgb(120, 120, 116);
+    max-width: 60ch;
+    margin-top: 12px;
+    padding-bottom: 25px;
+}
+
+
+/* styling for all the buttons */
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #f59bbf, #8ae6d6);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    cursor: pointer; /* when hovring the cursor over the button it will become a pointer*/
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* styling for the button when hovering over it. i used the transform property to let the button go upward
+    vertically and when hovering over it will make the shadow shift 6px downwards the shadow is 80% transparent */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+caption {
+    padding-bottom: 40px;
+}
+
+/* styling for the skills table
+    i made the width of the table 40% so it would be more appealing to the eye and be wide enough
+    i used the border-collapse property so i would nerge all the cells to match my design
+    i used the overflow property and gave it the value hidden to hide any content 
+    that overflows the boundry and also so the corner in the bottom stay rounder */
+.skills-table {
+    width: 40%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* styling to make the "frist child" of the th element borders on top be rounded */
+.skills-table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+/* styling to make the "last child" of the th element borders on top be rounded */
+.skills-table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* styling to make the head of the table background be gradiant to match my design*/
+.skills-table thead {
+    background: linear-gradient(135deg, #f59bbf, #8ae6d6);
+    color: white;
+}
+
+/* just normal styling to center the text and give more space with the padding*/
+.skills-table th,
+td {
+    padding: 16px 18px;
+    text-align: center;
+}
+
+
+/* Styling for the tables it selects the "even" table cells and make them this color*/
+.skills-table tbody tr:nth-child(even) {
+    background: #fdfdfd;
+}
+
+/* Styling for the tables it selects the "odd" table cells and make them this color*/
+.skills-table tbody tr:nth-child(odd) {
+    background: #f7f7f7;
+}
+
+/* when hovering over the table rows they will change to this color*/
+.skills-table tbody tr:hover {
+    background: #ffeaf3;
+    transition: 0.3s ease;
+}
+
+/* Grid layout cause it much easier for a gallery
+    i made it only one row and 3 columns so i could put h2 tag 
+    between them to catograize the gallery */
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* just centering the main gallery page title */
+.gallery-section h1 {
+    text-align: center;
+}
+
+/* section headings inside the gallery "categories" */
+.gallery-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #f59bbf;
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+/* for responsivness only when viewing through a bigger or a smaller screen*/
+@media (max-width: 900px) {
+    .container-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* creating the gallery card/containter to house the image*/
+.gallery-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* wrapper to keep images full width inside the card */
+.img-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* i used object-fit property with the value coover so that the image fills 
+    the card width and keeps consistent height with cropping */
+.img-wrap img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+}
+
+/* subtle zoom effect on image when hovering over it*/
+.gallery-card:hover .img-wrap img {
+    transform: scale(1.03);
+}
+
+/* just some inner padding for the caption area under the image */
+.card-body {
+    padding: 14px 16px 18px;
+}
+
+/* some styling for the image/card title */
+.card-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #5d5d59;
+    margin-bottom: 6px;
+}
+
+/* some styling for the image/card paragraph */
+.card-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: rgb(120, 120, 116);
+    line-height: 1.6;
+}
+
+/* contact page container width + centering */
+.container-contact {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.container-contact h1{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* grid layout for the contact form area */
+.form-grid {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* labels stacked above inputs instead of being next to it */
+.form-grid label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-grid input,
+.form-grid textarea {
+    margin-bottom: 5px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #50504d;
+    background: #fcfafa;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 12px 14px;
+    resize: none; /* So the textarea cannot be expanded or shrunk*/
+    outline: none; /* to remove the default outline */
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+/* pastel focus ring and border color on focus to match my theme and design */
+.form-grid input:focus,
+.form-grid textarea:focus {
+    border-color: #f5a9c7;
+    box-shadow: 0 0 0 3px rgba(245, 155, 191, 0.18);
+    background: #fff;
+}
+
+.form-grid img {
+    padding: 40px;
+    margin-top: 40px;
+}
+/* style for the submit button to be centered */
+.form-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+/*  من هنا*/
+
+/* Styling for the quiz card */
+#quiz.form-grid {
+    width: 55%; /* narrower card */
+    margin: 0 auto;
+    padding: 40px 60px; /* slightly taller card */
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+}
+
+/* quiz layout */
+#quiz.form-grid {
+  grid-template-columns: 1fr; 
+  gap: 14px;    
+  padding: 32px 40px;  
+}
+
+#quiz #progress {
+  text-align: center;
+  margin-bottom: 4px;
+  color: rgb(120, 120, 116);
+}
+
+/* let the question placment be on the left*/
+#quiz #question {
+  text-align: left;  
+  margin-top: 4px;
+}
+
+#quiz label[for="answer"] {
+  justify-self: start; 
+  text-align: left;
+  margin-top: 2px;
+}
+
+/* the width of the answer input area*/
+#quiz #answer {
+  width: 50%;  
+}
+
+#quiz .quiz-actions {
+  margin-top: 16px;      
+  justify-content: center; 
+  gap: 24px;    
+}
+
+
+/* hide the answer + label + next and submit until quiz starts */
+#quiz:not(.active) #answer,
+#quiz:not(.active) label[for="answer"],
+#quiz:not(.active) #next,
+#quiz:not(.active) #submit {
+  display: none;
+}
+
+.captcha-row {
+  margin-top: 6px;
+}
+
+.captcha-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+#refreshCaptcha {
+  padding: 8px 14px;
+  border-radius: 20px;
+}
